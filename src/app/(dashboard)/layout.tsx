@@ -18,7 +18,6 @@ export default function DashboardShell({
                 setSidebarOpen={setSidebarOpen}
                 sidebarOpen={sidebarOpen}
                 sidebarCollapsed={sidebarCollapsed}
-                setSidebarCollapsed={setSidebarCollapsed}
             />
             {/* Main content */}
             <div className="flex-1 flex flex-col overflow-hidden">

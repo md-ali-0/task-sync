@@ -18,7 +18,7 @@ export default function TaskManagerDashboard() {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [previousTasks, setPreviousTasks] = useState<Task[]>([]);
 
-    const { data, isError, isLoading, isSuccess, error } = useGetAllTasksQuery(
+    const { data, isError, isSuccess } = useGetAllTasksQuery(
         []
     );
 

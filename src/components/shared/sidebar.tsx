@@ -24,12 +24,10 @@ export default function Sidebar({
     sidebarOpen,
     setSidebarOpen,
     sidebarCollapsed,
-    setSidebarCollapsed,
 }: {
     sidebarOpen: boolean;
     setSidebarOpen: Dispatch<SetStateAction<boolean>>;
     sidebarCollapsed: boolean;
-    setSidebarCollapsed: Dispatch<SetStateAction<boolean>>;
 }) {
     const pathname = usePathname();
     const { setIsLoading } = useSession();

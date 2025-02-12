@@ -4,14 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { Task } from "@/types";
 import { Draggable } from "@hello-pangea/dnd";
 import {
-    AlertCircle,
     CalendarIcon,
-    CheckCircle2,
-    Clock,
     ClockIcon,
     MoreVertical,
     Pencil,
-    Trash2,
+    Trash2
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
@@ -48,18 +45,7 @@ export function TaskCard({ task, index, columnId }: TaskCardProps) {
                 return "bg-blue-500";
         }
     };
-
-    const getStatusIcon = (status: string) => {
-        switch (status.toString()) {
-            case "DONE":
-                return <CheckCircle2 className="h-5 w-5 text-green-500" />;
-            case "IN_PROGRESS":
-                return <Clock className="h-5 w-5 text-yellow-500" />;
-            default:
-                return <AlertCircle className="h-5 w-5 text-red-500" />;
-        }
-    };
-
+    
     return (
         <>
             <Draggable draggableId={`${columnId}-${task.id}`} index={index}>
