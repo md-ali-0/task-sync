@@ -144,8 +144,8 @@ export function UserLoginForm({ className, ...props }: UserLoginFormProps) {
             </Form>
             {/* Quick login credentials */}
             <div className="mt-2 space-y-4">
-                <div className="flex items-center justify-between bg-purple-50 p-3 rounded-lg">
-                    <span className="text-purple-800">
+                <div className="flex items-center justify-between bg-purple-500/10 p-3 rounded-lg">
+                    <span className="text-primary">
                         User: user@gmail.com / 123456
                     </span>
                     <Button
@@ -155,7 +155,7 @@ export function UserLoginForm({ className, ...props }: UserLoginFormProps) {
                                 "123456"
                             )
                         }
-                        className="bg-purple-600 hover:bg-purple-700 text-white"
+                        className="bg-primary hover:bg-primary/90 text-white"
                         variant="default"
                         size={"icon"}
                     >
