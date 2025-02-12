@@ -25,7 +25,7 @@ export function TaskColumn({ status, tasks }: TaskColumnProps) {
                         {...provided.droppableProps}
                         ref={provided.innerRef}
                         className={`flex-1 overflow-y-auto max-h-[50vh] space-y-4 transition-colors duration-200 ease-in-out ${
-                            snapshot.isDraggingOver ? "bg-indigo-50" : ""
+                            snapshot.isDraggingOver ? "bg-indigo-500/20" : ""
                         }`}
                     >
                         {tasks.map((task, index) => (

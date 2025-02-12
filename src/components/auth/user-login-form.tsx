@@ -61,6 +61,8 @@ export function UserLoginForm({ className, ...props }: UserLoginFormProps) {
             router.replace(decodeURIComponent(destination));
             toast.success("User Logged In Successfully");
         } else {
+            console.log(response);
+            
             toast.error(response?.errors);
         }
         setIsLoading(false);
@@ -76,7 +78,7 @@ export function UserLoginForm({ className, ...props }: UserLoginFormProps) {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="sr-only">
+                                    <FormLabel>
                                         Email
                                     </FormLabel>
                                     <FormControl>
@@ -94,7 +96,7 @@ export function UserLoginForm({ className, ...props }: UserLoginFormProps) {
                             name="password"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="sr-only">
+                                    <FormLabel>
                                         Password
                                     </FormLabel>
                                     <FormControl>
@@ -141,20 +143,23 @@ export function UserLoginForm({ className, ...props }: UserLoginFormProps) {
                 </form>
             </Form>
             {/* Quick login credentials */}
-            <div className="mt-2.5 space-y-4">
-                <div className="flex items-center justify-between bg-blue-100 p-3 rounded-lg">
-                    <span className="text-blue-800">
+            <div className="mt-2 space-y-4">
+                <div className="flex items-center justify-between bg-purple-50 p-3 rounded-lg">
+                    <span className="text-purple-800">
                         User: user@gmail.com / 123456
                     </span>
                     <Button
                         onClick={() =>
-                            handleQuickSetCredentials("user@gmail.com", "123456")
+                            handleQuickSetCredentials(
+                                "user@gmail.com",
+                                "123456"
+                            )
                         }
-                        className="bg-blue-600 text-white"
+                        className="bg-purple-600 hover:bg-purple-700 text-white"
                         variant="default"
                         size={"icon"}
                     >
-                        <ClipboardCopy />
+                        <ClipboardCopy className="h-4 w-4" />
                     </Button>
                 </div>
             </div>
